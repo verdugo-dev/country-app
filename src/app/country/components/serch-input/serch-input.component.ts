@@ -11,8 +11,4 @@ export class SerchInputComponent {
   placeholder = input('Buscar');
   value = output<string>();
 
-  onSearch( value: string ) {
-    console.log({value})
-  }
-
 }

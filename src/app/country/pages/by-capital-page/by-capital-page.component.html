@@ -1,5 +1,5 @@
 <!-- FORM -->
-<country-search-input placeholder="Buscar por Capital"></country-search-input>
+<country-search-input placeholder="Buscar por Capital" (value)="onSearch($event)"></country-search-input>
 
 <!-- TABLE -->
-<country-list></country-list>
+<country-list [countries]="countries()"></country-list>
