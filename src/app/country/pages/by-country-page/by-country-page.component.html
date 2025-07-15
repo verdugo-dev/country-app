@@ -1,5 +1,8 @@
-<!-- FORM -->
-<country-search-input placeholder="Buscar por País"></country-search-input>
+<country-search-input placeholder="Buscar por País" (value)="query.set($event)"></country-search-input>
 
-<!-- TABLE -->
-<country-list [countries]="[]"></country-list>
+@if ( countryResource.error()) {
+    <h3>{{ countryResource.error() }}</h3>
+
+} @if ( countryResource.hasValue() ) {
+    <country-list [countries]="countryResource.value()"></country-list>
+}
