@@ -1,5 +1,9 @@
 <!-- FORM -->
 <country-search-input placeholder="Buscar por Capital" (value)="onSearch($event)"></country-search-input>
 
-<!-- TABLE -->
-<country-list [countries]="countries()"></country-list>
+@if (isError()) {
+    <h3>{{ isError() }}</h3>
+} @else {
+    <!-- TABLE -->
+    <country-list [countries]="countries()"></country-list>
+}
