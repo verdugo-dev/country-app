@@ -8,7 +8,9 @@ export class CountryMapper {
             capital: capitalArray = [],
             cca2,
             flag,
-            population
+            population,
+            region,
+            subregion
         } = restCountry;
 
         const capital = Array.isArray(capitalArray) ? capitalArray.join(', ') : '';
@@ -21,7 +23,9 @@ export class CountryMapper {
             flag,
             flagSvg: svg,
             name,
-            population
+            population,
+            region,
+            subregion
         };
     }
 
