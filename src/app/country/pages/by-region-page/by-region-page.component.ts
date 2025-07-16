@@ -1,5 +1,4 @@
 import { Component, inject, signal } from '@angular/core';
-import { SerchInputComponent } from "../../components/serch-input/serch-input.component";
 import { CountryListComponent } from "../../components/country-list/country-list.component";
 import { CountryService } from '../../services/country.service';
 import { rxResource } from '@angular/core/rxjs-interop';
@@ -8,7 +7,7 @@ import type { Region } from '../../interfaces/region.type';
 
 @Component({
   selector: 'app-by-region-page',
-  imports: [SerchInputComponent, CountryListComponent],
+  imports: [CountryListComponent],
   templateUrl: './by-region-page.component.html',
   styleUrl: './by-region-page.component.css'
 })
