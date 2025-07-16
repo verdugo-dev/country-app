@@ -1,5 +1,10 @@
 <!-- FORM -->
-<country-search-input placeholder="Buscar por Capital" (value)="query.set($event)"></country-search-input>
+<country-search-input 
+    placeholder="Buscar por Capital" 
+    (value)="query.set($event)"
+    [debounceTime]="500"
+>
+</country-search-input>
 
 <country-list 
     [countries]="countryResource.value() ?? []"
