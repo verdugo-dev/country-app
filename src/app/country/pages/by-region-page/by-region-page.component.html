@@ -1,5 +1,10 @@
 <!-- FORM -->
 <country-search-input placeholder="Buscar por Región"></country-search-input>
 
-<!-- TABLE -->
-<country-list [countries]="[]"></country-list>
+<country-list 
+    [countries]="countryResource.value() ?? []"
+    [errorMessage]="countryResource.error()"
+    [isEmpty]="countryResource.value()?.length === 0"
+    [isLoading]="countryResource.isLoading()"
+>
+</country-list>
